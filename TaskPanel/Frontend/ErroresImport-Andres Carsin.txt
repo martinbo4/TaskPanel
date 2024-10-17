@@ -1,2 +1,0 @@
-2024-10-15T20:17:56.8979278Z - Error: Non-existing panel ID at line 2: Contactar al cliente,Contactar al cliente para actualizar el estado del proyecto.,10/09/2025,2
-2024-10-15T20:17:56.8979337Z - Error: Non-existing panel ID at line 3: Pagar proveedores,Revisar planilla de proveedores y pagar.,19/09/2025,2
