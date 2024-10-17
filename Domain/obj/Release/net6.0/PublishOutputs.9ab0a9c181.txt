@@ -1,0 +1,4 @@
+C:\Users\marti\OneDrive\Escritorio\TaskPanel\release\Domain.dll
+C:\Users\marti\OneDrive\Escritorio\TaskPanel\release\Domain.deps.json
+C:\Users\marti\OneDrive\Escritorio\TaskPanel\release\Domain.pdb
+C:\Users\marti\OneDrive\Escritorio\TaskPanel\release\CsvHelper.dll

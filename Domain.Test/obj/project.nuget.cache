@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1wEvpYQImmv6DlU9HrId0rt0C3CjnmO4y64vTn9k9nmoSP0Go0BcZeY4gsy6dfkn7whSXK052DFT8IcBfs8t7w==",
+  "dgSpecHash": "j5JKWDXNw0ATH9dvSCERaHdNE9ob8IwGdZejIQFbQTEl7o1SWXG+UfMdyAoQss8sl8xMgvGw+LMROQWgWgmbrg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\marti\\OneDrive\\Documentos\\ORT\\5to Semestre\\Diseño\\283558_289379_288255\\TaskPanel\\Domain.Test\\Domain.Test.csproj",
+  "projectFilePath": "C:\\Users\\marti\\OneDrive\\Escritorio\\TaskPanel\\Domain.Test\\Domain.Test.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\marti\\.nuget\\packages\\coverlet.collector\\3.1.2\\coverlet.collector.3.1.2.nupkg.sha512",
     "C:\\Users\\marti\\.nuget\\packages\\csvhelper\\33.0.1\\csvhelper.33.0.1.nupkg.sha512",

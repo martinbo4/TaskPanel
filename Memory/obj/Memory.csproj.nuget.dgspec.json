@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\marti\\OneDrive\\Documentos\\ORT\\5to Semestre\\Diseño\\283558_289379_288255\\TaskPanel\\Memory\\Memory.csproj": {}
+    "C:\\Users\\marti\\OneDrive\\Escritorio\\TaskPanel\\Memory\\Memory.csproj": {}
   },
   "projects": {
-    "C:\\Users\\marti\\OneDrive\\Documentos\\ORT\\5to Semestre\\Diseño\\283558_289379_288255\\TaskPanel\\Domain\\Domain.csproj": {
+    "C:\\Users\\marti\\OneDrive\\Escritorio\\TaskPanel\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\marti\\OneDrive\\Documentos\\ORT\\5to Semestre\\Diseño\\283558_289379_288255\\TaskPanel\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\marti\\OneDrive\\Escritorio\\TaskPanel\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\marti\\OneDrive\\Documentos\\ORT\\5to Semestre\\Diseño\\283558_289379_288255\\TaskPanel\\Domain\\Domain.csproj",
+        "projectPath": "C:\\Users\\marti\\OneDrive\\Escritorio\\TaskPanel\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\marti\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\marti\\OneDrive\\Documentos\\ORT\\5to Semestre\\Diseño\\283558_289379_288255\\TaskPanel\\Domain\\obj\\",
+        "outputPath": "C:\\Users\\marti\\OneDrive\\Escritorio\\TaskPanel\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\marti\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -63,14 +63,14 @@
         }
       }
     },
-    "C:\\Users\\marti\\OneDrive\\Documentos\\ORT\\5to Semestre\\Diseño\\283558_289379_288255\\TaskPanel\\Memory\\Memory.csproj": {
+    "C:\\Users\\marti\\OneDrive\\Escritorio\\TaskPanel\\Memory\\Memory.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\marti\\OneDrive\\Documentos\\ORT\\5to Semestre\\Diseño\\283558_289379_288255\\TaskPanel\\Memory\\Memory.csproj",
+        "projectUniqueName": "C:\\Users\\marti\\OneDrive\\Escritorio\\TaskPanel\\Memory\\Memory.csproj",
         "projectName": "Memory",
-        "projectPath": "C:\\Users\\marti\\OneDrive\\Documentos\\ORT\\5to Semestre\\Diseño\\283558_289379_288255\\TaskPanel\\Memory\\Memory.csproj",
+        "projectPath": "C:\\Users\\marti\\OneDrive\\Escritorio\\TaskPanel\\Memory\\Memory.csproj",
         "packagesPath": "C:\\Users\\marti\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\marti\\OneDrive\\Documentos\\ORT\\5to Semestre\\Diseño\\283558_289379_288255\\TaskPanel\\Memory\\obj\\",
+        "outputPath": "C:\\Users\\marti\\OneDrive\\Escritorio\\TaskPanel\\Memory\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\marti\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -85,8 +85,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\marti\\OneDrive\\Documentos\\ORT\\5to Semestre\\Diseño\\283558_289379_288255\\TaskPanel\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\marti\\OneDrive\\Documentos\\ORT\\5to Semestre\\Diseño\\283558_289379_288255\\TaskPanel\\Domain\\Domain.csproj"
+              "C:\\Users\\marti\\OneDrive\\Escritorio\\TaskPanel\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\marti\\OneDrive\\Escritorio\\TaskPanel\\Domain\\Domain.csproj"
               }
             }
           }

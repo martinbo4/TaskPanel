@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "D1eb7Kgxo0CB0U1I+eNDvmKa7jcM7vZgDEDOg7+UT7nTo7a0V2GCy0erDa68uYIWbnZY62h7skVLvPYJsxEVjw==",
+  "dgSpecHash": "5p6MI9LXojzi59zqHfHil5MHc6xDMBEMUk7egjJqxLjW89OJdgRS4y0eAVkbsSEm0WkkOAbEM9KLt59HEgt2sw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\marti\\OneDrive\\Documentos\\ORT\\5to Semestre\\Diseño\\283558_289379_288255\\TaskPanel\\BusinnessLogic.Test\\BusinnessLogic.Test.csproj",
+  "projectFilePath": "C:\\Users\\marti\\OneDrive\\Escritorio\\TaskPanel\\BusinnessLogic.Test\\BusinnessLogic.Test.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\marti\\.nuget\\packages\\coverlet.collector\\3.1.2\\coverlet.collector.3.1.2.nupkg.sha512",
     "C:\\Users\\marti\\.nuget\\packages\\csvhelper\\33.0.1\\csvhelper.33.0.1.nupkg.sha512",

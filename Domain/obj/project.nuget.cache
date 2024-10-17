@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Gtb/oBhX6bvcaEE1WorY5iEsSQD9Z4nySDRdNoSW49jzAPUEPSfc5aHlX2i4Bd+pvRAfWW5/dUjQmZdPoZ6ldA==",
+  "dgSpecHash": "tGV59onnsYZzjtwFGZJB+J4guRCfc/ZoNhtNCoZYwPQHSPjDgtzWPnCeiaq9aJmOTOkAKNvn7Uudx9XKtZO68w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\marti\\OneDrive\\Documentos\\ORT\\5to Semestre\\Diseño\\283558_289379_288255\\TaskPanel\\Domain\\Domain.csproj",
+  "projectFilePath": "C:\\Users\\marti\\OneDrive\\Escritorio\\TaskPanel\\Domain\\Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\marti\\.nuget\\packages\\csvhelper\\33.0.1\\csvhelper.33.0.1.nupkg.sha512"
   ],

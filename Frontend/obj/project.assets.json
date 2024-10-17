@@ -114,11 +114,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\marti\\OneDrive\\Documentos\\ORT\\5to Semestre\\Diseño\\283558_289379_288255\\TaskPanel\\Frontend\\Frontend.csproj",
+      "projectUniqueName": "C:\\Users\\marti\\OneDrive\\Escritorio\\TaskPanel\\Frontend\\Frontend.csproj",
       "projectName": "Frontend",
-      "projectPath": "C:\\Users\\marti\\OneDrive\\Documentos\\ORT\\5to Semestre\\Diseño\\283558_289379_288255\\TaskPanel\\Frontend\\Frontend.csproj",
+      "projectPath": "C:\\Users\\marti\\OneDrive\\Escritorio\\TaskPanel\\Frontend\\Frontend.csproj",
       "packagesPath": "C:\\Users\\marti\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\marti\\OneDrive\\Documentos\\ORT\\5to Semestre\\Diseño\\283558_289379_288255\\TaskPanel\\Frontend\\obj\\",
+      "outputPath": "C:\\Users\\marti\\OneDrive\\Escritorio\\TaskPanel\\Frontend\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\marti\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -133,8 +133,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\marti\\OneDrive\\Documentos\\ORT\\5to Semestre\\Diseño\\283558_289379_288255\\TaskPanel\\BusinessLogic\\BusinessLogic.csproj": {
-              "projectPath": "C:\\Users\\marti\\OneDrive\\Documentos\\ORT\\5to Semestre\\Diseño\\283558_289379_288255\\TaskPanel\\BusinessLogic\\BusinessLogic.csproj"
+            "C:\\Users\\marti\\OneDrive\\Escritorio\\TaskPanel\\BusinessLogic\\BusinessLogic.csproj": {
+              "projectPath": "C:\\Users\\marti\\OneDrive\\Escritorio\\TaskPanel\\BusinessLogic\\BusinessLogic.csproj"
             }
           }
         }

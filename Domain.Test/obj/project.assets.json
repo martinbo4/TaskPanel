@@ -6402,11 +6402,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\marti\\OneDrive\\Documentos\\ORT\\5to Semestre\\Diseño\\283558_289379_288255\\TaskPanel\\Domain.Test\\Domain.Test.csproj",
+      "projectUniqueName": "C:\\Users\\marti\\OneDrive\\Escritorio\\TaskPanel\\Domain.Test\\Domain.Test.csproj",
       "projectName": "Domain.Test",
-      "projectPath": "C:\\Users\\marti\\OneDrive\\Documentos\\ORT\\5to Semestre\\Diseño\\283558_289379_288255\\TaskPanel\\Domain.Test\\Domain.Test.csproj",
+      "projectPath": "C:\\Users\\marti\\OneDrive\\Escritorio\\TaskPanel\\Domain.Test\\Domain.Test.csproj",
       "packagesPath": "C:\\Users\\marti\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\marti\\OneDrive\\Documentos\\ORT\\5to Semestre\\Diseño\\283558_289379_288255\\TaskPanel\\Domain.Test\\obj\\",
+      "outputPath": "C:\\Users\\marti\\OneDrive\\Escritorio\\TaskPanel\\Domain.Test\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\marti\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -6421,8 +6421,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\marti\\OneDrive\\Documentos\\ORT\\5to Semestre\\Diseño\\283558_289379_288255\\TaskPanel\\Domain\\Domain.csproj": {
-              "projectPath": "C:\\Users\\marti\\OneDrive\\Documentos\\ORT\\5to Semestre\\Diseño\\283558_289379_288255\\TaskPanel\\Domain\\Domain.csproj"
+            "C:\\Users\\marti\\OneDrive\\Escritorio\\TaskPanel\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Users\\marti\\OneDrive\\Escritorio\\TaskPanel\\Domain\\Domain.csproj"
             }
           }
         }

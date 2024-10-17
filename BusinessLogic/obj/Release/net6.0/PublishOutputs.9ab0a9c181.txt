@@ -1,0 +1,8 @@
+C:\Users\marti\OneDrive\Escritorio\TaskPanel\release\BusinessLogic.dll
+C:\Users\marti\OneDrive\Escritorio\TaskPanel\release\BusinessLogic.deps.json
+C:\Users\marti\OneDrive\Escritorio\TaskPanel\release\BusinessLogic.pdb
+C:\Users\marti\OneDrive\Escritorio\TaskPanel\release\CsvHelper.dll
+C:\Users\marti\OneDrive\Escritorio\TaskPanel\release\Domain.dll
+C:\Users\marti\OneDrive\Escritorio\TaskPanel\release\Memory.dll
+C:\Users\marti\OneDrive\Escritorio\TaskPanel\release\Domain.pdb
+C:\Users\marti\OneDrive\Escritorio\TaskPanel\release\Memory.pdb

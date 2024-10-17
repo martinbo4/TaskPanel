@@ -6441,11 +6441,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\marti\\OneDrive\\Documentos\\ORT\\5to Semestre\\Diseño\\283558_289379_288255\\TaskPanel\\BusinnessLogic.Test\\BusinnessLogic.Test.csproj",
+      "projectUniqueName": "C:\\Users\\marti\\OneDrive\\Escritorio\\TaskPanel\\BusinnessLogic.Test\\BusinnessLogic.Test.csproj",
       "projectName": "BusinnessLogic.Test",
-      "projectPath": "C:\\Users\\marti\\OneDrive\\Documentos\\ORT\\5to Semestre\\Diseño\\283558_289379_288255\\TaskPanel\\BusinnessLogic.Test\\BusinnessLogic.Test.csproj",
+      "projectPath": "C:\\Users\\marti\\OneDrive\\Escritorio\\TaskPanel\\BusinnessLogic.Test\\BusinnessLogic.Test.csproj",
       "packagesPath": "C:\\Users\\marti\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\marti\\OneDrive\\Documentos\\ORT\\5to Semestre\\Diseño\\283558_289379_288255\\TaskPanel\\BusinnessLogic.Test\\obj\\",
+      "outputPath": "C:\\Users\\marti\\OneDrive\\Escritorio\\TaskPanel\\BusinnessLogic.Test\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\marti\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -6460,11 +6460,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\marti\\OneDrive\\Documentos\\ORT\\5to Semestre\\Diseño\\283558_289379_288255\\TaskPanel\\BusinessLogic\\BusinessLogic.csproj": {
-              "projectPath": "C:\\Users\\marti\\OneDrive\\Documentos\\ORT\\5to Semestre\\Diseño\\283558_289379_288255\\TaskPanel\\BusinessLogic\\BusinessLogic.csproj"
+            "C:\\Users\\marti\\OneDrive\\Escritorio\\TaskPanel\\BusinessLogic\\BusinessLogic.csproj": {
+              "projectPath": "C:\\Users\\marti\\OneDrive\\Escritorio\\TaskPanel\\BusinessLogic\\BusinessLogic.csproj"
             },
-            "C:\\Users\\marti\\OneDrive\\Documentos\\ORT\\5to Semestre\\Diseño\\283558_289379_288255\\TaskPanel\\Domain\\Domain.csproj": {
-              "projectPath": "C:\\Users\\marti\\OneDrive\\Documentos\\ORT\\5to Semestre\\Diseño\\283558_289379_288255\\TaskPanel\\Domain\\Domain.csproj"
+            "C:\\Users\\marti\\OneDrive\\Escritorio\\TaskPanel\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Users\\marti\\OneDrive\\Escritorio\\TaskPanel\\Domain\\Domain.csproj"
             }
           }
         }

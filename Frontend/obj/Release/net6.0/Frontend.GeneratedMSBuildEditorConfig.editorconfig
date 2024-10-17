@@ -8,137 +8,137 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Frontend
 build_property.RootNamespace = Frontend
-build_property.ProjectDir = C:\Users\marti\OneDrive\Documentos\ORT\5to Semestre\Diseño\283558_289379_288255\TaskPanel\Frontend\
+build_property.ProjectDir = C:\Users\marti\OneDrive\Escritorio\TaskPanel\Frontend\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\marti\OneDrive\Documentos\ORT\5to Semestre\Diseño\283558_289379_288255\TaskPanel\Frontend
+build_property.MSBuildProjectDirectory = C:\Users\marti\OneDrive\Escritorio\TaskPanel\Frontend
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/marti/OneDrive/Documentos/ORT/5to Semestre/Diseño/283558_289379_288255/TaskPanel/Frontend/App.razor]
+[C:/Users/marti/OneDrive/Escritorio/TaskPanel/Frontend/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/marti/OneDrive/Documentos/ORT/5to Semestre/Diseño/283558_289379_288255/TaskPanel/Frontend/Pages/AddComment.razor]
+[C:/Users/marti/OneDrive/Escritorio/TaskPanel/Frontend/Pages/AddComment.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkQ29tbWVudC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/marti/OneDrive/Documentos/ORT/5to Semestre/Diseño/283558_289379_288255/TaskPanel/Frontend/Pages/AddPanel.razor]
+[C:/Users/marti/OneDrive/Escritorio/TaskPanel/Frontend/Pages/AddPanel.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkUGFuZWwucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/marti/OneDrive/Documentos/ORT/5to Semestre/Diseño/283558_289379_288255/TaskPanel/Frontend/Pages/AddTask.razor]
+[C:/Users/marti/OneDrive/Escritorio/TaskPanel/Frontend/Pages/AddTask.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkVGFzay5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/marti/OneDrive/Documentos/ORT/5to Semestre/Diseño/283558_289379_288255/TaskPanel/Frontend/Pages/AddTeam.razor]
+[C:/Users/marti/OneDrive/Escritorio/TaskPanel/Frontend/Pages/AddTeam.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkVGVhbS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/marti/OneDrive/Documentos/ORT/5to Semestre/Diseño/283558_289379_288255/TaskPanel/Frontend/Pages/AddUser.razor]
+[C:/Users/marti/OneDrive/Escritorio/TaskPanel/Frontend/Pages/AddUser.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkVXNlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/marti/OneDrive/Documentos/ORT/5to Semestre/Diseño/283558_289379_288255/TaskPanel/Frontend/Pages/Counter.razor]
+[C:/Users/marti/OneDrive/Escritorio/TaskPanel/Frontend/Pages/Counter.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/marti/OneDrive/Documentos/ORT/5to Semestre/Diseño/283558_289379_288255/TaskPanel/Frontend/Pages/EditPanel.razor]
+[C:/Users/marti/OneDrive/Escritorio/TaskPanel/Frontend/Pages/EditPanel.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdFBhbmVsLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/marti/OneDrive/Documentos/ORT/5to Semestre/Diseño/283558_289379_288255/TaskPanel/Frontend/Pages/EditTask.razor]
+[C:/Users/marti/OneDrive/Escritorio/TaskPanel/Frontend/Pages/EditTask.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdFRhc2sucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/marti/OneDrive/Documentos/ORT/5to Semestre/Diseño/283558_289379_288255/TaskPanel/Frontend/Pages/EditTeam.razor]
+[C:/Users/marti/OneDrive/Escritorio/TaskPanel/Frontend/Pages/EditTeam.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdFRlYW0ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/marti/OneDrive/Documentos/ORT/5to Semestre/Diseño/283558_289379_288255/TaskPanel/Frontend/Pages/EditUser.razor]
+[C:/Users/marti/OneDrive/Escritorio/TaskPanel/Frontend/Pages/EditUser.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdFVzZXIucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/marti/OneDrive/Documentos/ORT/5to Semestre/Diseño/283558_289379_288255/TaskPanel/Frontend/Pages/FetchData.razor]
+[C:/Users/marti/OneDrive/Escritorio/TaskPanel/Frontend/Pages/FetchData.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEYXRhLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/marti/OneDrive/Documentos/ORT/5to Semestre/Diseño/283558_289379_288255/TaskPanel/Frontend/Pages/Index.razor]
+[C:/Users/marti/OneDrive/Escritorio/TaskPanel/Frontend/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/marti/OneDrive/Documentos/ORT/5to Semestre/Diseño/283558_289379_288255/TaskPanel/Frontend/Pages/OpenComments.razor]
+[C:/Users/marti/OneDrive/Escritorio/TaskPanel/Frontend/Pages/OpenComments.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3BlbkNvbW1lbnRzLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/marti/OneDrive/Documentos/ORT/5to Semestre/Diseño/283558_289379_288255/TaskPanel/Frontend/Pages/OpenOverdue.razor]
+[C:/Users/marti/OneDrive/Escritorio/TaskPanel/Frontend/Pages/OpenOverdue.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3Blbk92ZXJkdWUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/marti/OneDrive/Documentos/ORT/5to Semestre/Diseño/283558_289379_288255/TaskPanel/Frontend/Pages/OvedueReactivate.razor]
+[C:/Users/marti/OneDrive/Escritorio/TaskPanel/Frontend/Pages/OvedueReactivate.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3ZlZHVlUmVhY3RpdmF0ZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/marti/OneDrive/Documentos/ORT/5to Semestre/Diseño/283558_289379_288255/TaskPanel/Frontend/Pages/PanelVisualization.razor]
+[C:/Users/marti/OneDrive/Escritorio/TaskPanel/Frontend/Pages/PanelVisualization.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGFuZWxWaXN1YWxpemF0aW9uLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/marti/OneDrive/Documentos/ORT/5to Semestre/Diseño/283558_289379_288255/TaskPanel/Frontend/Pages/RecycleBin.razor]
+[C:/Users/marti/OneDrive/Escritorio/TaskPanel/Frontend/Pages/RecycleBin.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVjeWNsZUJpbi5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/marti/OneDrive/Documentos/ORT/5to Semestre/Diseño/283558_289379_288255/TaskPanel/Frontend/Pages/SignIn.razor]
+[C:/Users/marti/OneDrive/Escritorio/TaskPanel/Frontend/Pages/SignIn.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2lnbkluLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/marti/OneDrive/Documentos/ORT/5to Semestre/Diseño/283558_289379_288255/TaskPanel/Frontend/Pages/SignOut.razor]
+[C:/Users/marti/OneDrive/Escritorio/TaskPanel/Frontend/Pages/SignOut.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2lnbk91dC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/marti/OneDrive/Documentos/ORT/5to Semestre/Diseño/283558_289379_288255/TaskPanel/Frontend/Pages/TaskVisualization.razor]
+[C:/Users/marti/OneDrive/Escritorio/TaskPanel/Frontend/Pages/TaskVisualization.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGFza1Zpc3VhbGl6YXRpb24ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/marti/OneDrive/Documentos/ORT/5to Semestre/Diseño/283558_289379_288255/TaskPanel/Frontend/Pages/TeamManagement.razor]
+[C:/Users/marti/OneDrive/Escritorio/TaskPanel/Frontend/Pages/TeamManagement.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGVhbU1hbmFnZW1lbnQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/marti/OneDrive/Documentos/ORT/5to Semestre/Diseño/283558_289379_288255/TaskPanel/Frontend/Pages/UploadTask.razor]
+[C:/Users/marti/OneDrive/Escritorio/TaskPanel/Frontend/Pages/UploadTask.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXBsb2FkVGFzay5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/marti/OneDrive/Documentos/ORT/5to Semestre/Diseño/283558_289379_288255/TaskPanel/Frontend/Pages/UserManagement.razor]
+[C:/Users/marti/OneDrive/Escritorio/TaskPanel/Frontend/Pages/UserManagement.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlck1hbmFnZW1lbnQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/marti/OneDrive/Documentos/ORT/5to Semestre/Diseño/283558_289379_288255/TaskPanel/Frontend/Shared/Auth.razor]
+[C:/Users/marti/OneDrive/Escritorio/TaskPanel/Frontend/Shared/Auth.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEF1dGgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/marti/OneDrive/Documentos/ORT/5to Semestre/Diseño/283558_289379_288255/TaskPanel/Frontend/Shared/SurveyPrompt.razor]
+[C:/Users/marti/OneDrive/Escritorio/TaskPanel/Frontend/Shared/SurveyPrompt.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/marti/OneDrive/Documentos/ORT/5to Semestre/Diseño/283558_289379_288255/TaskPanel/Frontend/_Imports.razor]
+[C:/Users/marti/OneDrive/Escritorio/TaskPanel/Frontend/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/marti/OneDrive/Documentos/ORT/5to Semestre/Diseño/283558_289379_288255/TaskPanel/Frontend/Shared/MainLayout.razor]
+[C:/Users/marti/OneDrive/Escritorio/TaskPanel/Frontend/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-gknvvqa2uj
 
-[C:/Users/marti/OneDrive/Documentos/ORT/5to Semestre/Diseño/283558_289379_288255/TaskPanel/Frontend/Shared/NavMenu.razor]
+[C:/Users/marti/OneDrive/Escritorio/TaskPanel/Frontend/Shared/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-9ljbyqraro
 
-[C:/Users/marti/OneDrive/Documentos/ORT/5to Semestre/Diseño/283558_289379_288255/TaskPanel/Frontend/Pages/Error.cshtml]
+[C:/Users/marti/OneDrive/Escritorio/TaskPanel/Frontend/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/marti/OneDrive/Documentos/ORT/5to Semestre/Diseño/283558_289379_288255/TaskPanel/Frontend/Pages/_Host.cshtml]
+[C:/Users/marti/OneDrive/Escritorio/TaskPanel/Frontend/Pages/_Host.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0hvc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/marti/OneDrive/Documentos/ORT/5to Semestre/Diseño/283558_289379_288255/TaskPanel/Frontend/Pages/_Layout.cshtml]
+[C:/Users/marti/OneDrive/Escritorio/TaskPanel/Frontend/Pages/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0xheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
