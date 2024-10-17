@@ -1,0 +1,146 @@
+@page "/RecycleBin"
+
+@using BusinessLogic
+@using BusinessLogic.DTOs
+@inherits Auth
+@inject UserDto UserLog
+@inject RecycleBinLogic RecycleBinLogic
+
+
+<h1>RecycleBin</h1>
+
+<h3>
+    User Logged: @UserLog.FirstNameAndLastName
+</h3>
+
+<h3>Panels</h3>
+<table class="table">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Team</th>
+        <th>Description</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var panel in _panelsBin)
+    {
+        <tr>
+            <td>@panel.Name</td>
+            <td>@panel.TeamDto.Name</td>
+            <td>@panel.Description</td>
+            <td>
+                <button class="btn btn-danger btn-sm" @onclick="(() => DeletePanel(panel))">Delete</button>
+            </td>
+        </tr>
+    }
+
+    <br />
+    </tbody>
+</table>
+
+<h3>Tasks</h3>
+<table class="table">
+    <thead>
+    <tr>
+        <th>Title</th>
+        <th>Priority</th>
+        <th>Description</th>
+        <th>Deadline</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var task in _tasksBin)
+    {
+    <tr>
+        <td>@task.Title</td>
+        <td>@task.Priority</td>
+        <td>@task.Description</td>
+        <td>@task.Deadline</td>
+        <td>
+            <button class="btn btn-danger btn-sm" @onclick="(() => DeleteTask(task))">Delete</button>
+        </td>
+    </tr>
+    }
+
+    <br />
+
+    <div class="form-error">
+        @_message
+    </div>
+
+    <br />
+    </tbody>
+</table>
+
+<button type="button" class="btn btn-primary" @onclick="EmptyAll">Remove All</button>
+@code {
+    private UserDto? _currentUser;
+    private RecycleBinDto? _currentBin;
+    private List<PanelDto?>? _panelsBin;
+    private List<TaskDto>? _tasksBin;
+    private string _message = "";
+    
+    protected override void OnInitialized()
+    {
+        try
+        {
+            _currentUser = UserLog;
+            _currentBin = RecycleBinLogic.GetRecycleBin(_currentUser.Id);
+            _panelsBin = _currentBin.PanelsDtos;
+            _tasksBin = _currentBin.TasksDtos;
+        }
+        catch (ArgumentException ex)
+        {
+            _panelsBin = new List<PanelDto?>();
+            _tasksBin = new List<TaskDto>();
+        }
+    }
+    
+    private void DeleteTask(TaskDto? task){
+        try
+        {
+            RecycleBinLogic.RemoveTask(task,_currentUser!.Id);
+            _currentBin = RecycleBinLogic.GetRecycleBin(_currentUser.Id);
+            _panelsBin = _currentBin.PanelsDtos;
+            _tasksBin = _currentBin.TasksDtos;
+            _message = "Tasks have been deleted";
+        }
+        catch (ArgumentException ex)
+        {
+            _message = ex.Message;
+        }
+    }
+    
+    private void DeletePanel(PanelDto? panel){
+        try
+        {
+            RecycleBinLogic.RemovePanel(panel,_currentUser.Id);
+            _currentBin = RecycleBinLogic.GetRecycleBin(_currentUser.Id);
+            _panelsBin = _currentBin.PanelsDtos;
+            _tasksBin = _currentBin.TasksDtos;
+            _message = "Panels have been deleted";
+        }
+        catch (ArgumentException ex)
+        {
+            _message = ex.Message;
+        }
+    }
+    private void EmptyAll()
+    {
+        try
+        {
+            RecycleBinLogic.EmptyRecycleBin(_currentUser.Id);
+            _currentBin = RecycleBinLogic.GetRecycleBin(_currentUser.Id);
+            _panelsBin = _currentBin.PanelsDtos;
+            _tasksBin = _currentBin.TasksDtos;
+            _message = "Recycle Bin is empty";
+        }
+        catch (ArgumentException ex)
+        {
+            _message = ex.Message;
+        }
+    }
+}

@@ -1,0 +1,178 @@
+@page "/UploadTask"
+
+@using BusinessLogic
+@using BusinessLogic.DTOs
+@inject UserLogic UserLogic
+@inherits Auth
+@inject TeamLogic TeamLogic
+@inject TaskLogic TaskLogic
+@inject PanelLogic PanelLogic
+@inject UserDto UserLog
+@inject NavigationManager NavigationManager
+
+@if (_isPageVisible)
+{
+    <h1>Upload Task</h1>
+
+    <h3>
+        User Logged: @UserLog.FirstNameAndLastName
+    </h3>
+
+    <InputFile OnChange="HandleFileSelected" />
+    @if (_errorMessage != null)
+    {
+        <p style="color:red">@_errorMessage</p>
+    }
+    @if (_tasks != null && _tasks.Any())
+    {
+        <h3>Uploaded Tasks:</h3>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Due Date</th>
+                    <th>Panel ID</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var task in _tasks)
+                {
+                    <tr>
+                        <td>@task.Title</td>
+                        <td>@task.Description</td>
+                        <td>@task.Deadline</td>
+                        <td>@task.PanelDto?.Id</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+}
+else
+{
+    <div class="alert alert-danger" role="alert">
+        Access Denied: You do not have the necessary permissions to view this page.
+    </div>
+}
+
+@code {
+    private List<TaskDto?> _tasks = new List<TaskDto?>();
+    private string? _errorMessage;
+    private bool _isPageVisible = true;
+
+    protected override void OnInitialized()
+    {
+        if (UserLog.IsAdmin)
+        {
+            _isPageVisible = false;
+        }
+    }
+
+    private async Task HandleFileSelected(InputFileChangeEventArgs e)
+    {
+        var file = e.File;
+        if (file != null && file.ContentType == "text/csv")
+        {
+            try
+            {
+                using var streamReader = new StreamReader(file.OpenReadStream());
+                string content = await streamReader.ReadToEndAsync();
+                _tasks = ParseCsv(content);
+            }
+            catch (Exception ex)
+            {
+                _errorMessage = "Error reading the file: " + ex.Message;
+            }
+        }
+        else
+        {
+            _errorMessage = "Please upload a valid CSV file.";
+        }
+    }
+
+    private List<TaskDto?> ParseCsv(string csvContent)
+    {
+        string format = "dd/MM/yyyy";
+        var tasks = new List<TaskDto?>();
+        var lines = csvContent.Split(new[] { "\r\n", "\r", "\n" }, StringSplitOptions.RemoveEmptyEntries);
+        var errors = new List<string>();
+
+        for (int i = 1; i < lines.Length; i++)
+        {
+            var line = lines[i];
+            var columns = line.Split(',');
+
+            if (columns.Length == 4)
+            {
+                if (VerifyTitleIsBlank(columns))
+                {
+                    errors.Add($"Error: Invalid title at line {i + 1}: {line}");
+                }
+                if (VerifyInvalidDateFormat(columns, format, out var dateTime))
+                {
+                    errors.Add($"Error: Invalid date format at line {i + 1}: {line}");
+                    continue;
+                }
+                if (VerifyInvalidPanelId(columns, out var panelId))
+                {
+                    errors.Add($"Error: Non-existing panel ID at line {i + 1}: {line}");
+                    continue;
+                }
+
+                var task = new TaskDto()
+                {
+                    Title = columns[0].Trim(),
+                    Description = columns[1].Trim(),
+                    Deadline = dateTime,
+                    PanelDto = PanelLogic.GetPanelById(panelId)
+                };
+
+                tasks.Add(task);
+                TaskLogic.CreateTask(task, panelId);
+            }
+            else
+            {
+                errors.Add($"Error: Invalid number of columns at line {i + 1}: {line}");
+            }
+        }
+        
+        if (errors.Any())
+        {
+            LogErrors(errors);
+            _errorMessage = "Some errors occurred during the import. Please check the log for details.";
+        }
+
+        return tasks;
+    }
+
+    private bool VerifyInvalidPanelId(string[] columns, out int panelId)
+    {
+        return !int.TryParse(columns[3], out panelId) || PanelLogic.GetPanelById(panelId) == null;
+    }
+
+    private static bool VerifyTitleIsBlank(string[] columns)
+    {
+        return columns[0] == "";
+    }
+
+    private static bool VerifyInvalidDateFormat(string[] columns, string format, out DateTime dateTime)
+    {
+        return !DateTime.TryParseExact(columns[2].Trim(), format, System.Globalization.CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.None, out dateTime);
+    }
+
+    private void LogErrors(List<string> errors)
+    {
+        string userName = UserLog.FirstNameAndLastName;
+        string fileName = $"ErroresImport-{userName}.txt";
+        string filePath = Path.Combine(Environment.CurrentDirectory, fileName);
+
+        using (var writer = new StreamWriter(filePath, true))
+        {
+            foreach (var error in errors)
+            {
+                writer.WriteLine($"{DateTime.UtcNow.ToString("o")} - {error}");
+            }
+        }
+    }
+}

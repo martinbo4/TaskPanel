@@ -1,0 +1,91 @@
+@page "/team/{id:int}/edit/"
+@using BusinessLogic
+@using BusinessLogic.DTOs
+@inherits Auth
+@inject UserDto UserLog
+@inject TeamLogic TeamLogic
+@inject UserLogic UserLogic
+@inject NavigationManager NavigationManager
+
+<h1>Edit Team</h1>
+
+<h3>
+    User Logged: @UserLog.FirstNameAndLastName
+</h3>
+
+<form>
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" @bind="_currentTeam.Name" />
+    </div>
+    <div class="form-group">
+        <label for="maxMembers">MaxMembers</label>
+        <input type="number" class="form-control" id="maxMembers" @bind="_currentTeam.MaxMembers" min="1"/>
+    </div>
+    <div class="form-group">
+        <label for="description">Description</label>
+        <input type="text" class="form-control" id="description" @bind="_currentTeam.Description" />
+    </div>
+    <div class="form-group">
+        <label for="user">Select Users, when you select a user, they automatically become part of a team.</label>
+        <select data-mdb-select-init multiple class="form-control" id="users" @onchange="OnChangeUsers" >
+            @foreach (var user in _users){
+                <option value="@user.LogInDto.Email" >
+                    @user.FirstNameAndLastName
+                </option>
+            }
+        </select>
+    </div>
+
+    <br />
+
+    <div class="form-error">
+        @_message
+    </div>
+
+    <br />
+
+    <button type="button" class="btn btn-primary" @onclick="SaveChanges">Guardar cambios</button>
+    <a href="/TeamManagement">Cancelar</a>
+</form>
+@code {
+    [Parameter] public int Id { get; set; }
+    private string _message = "";
+
+    private TeamDto? _currentTeam;
+
+    private List<UserDto>? _users;
+
+    protected override void OnInitialized()
+    {
+        _currentTeam = TeamLogic.GetTeamById(Id);
+        _users = UserLogic.GetAllUsers();
+    }
+
+    private void SaveChanges()
+    {
+        try
+        {
+            TeamLogic.ModifyTeam(_currentTeam);
+            NavigationManager.NavigateTo("/TeamManagement");
+        }
+        catch (ArgumentException ex)
+        {
+            _message = ex.Message;
+        }
+    }
+
+    public void OnChangeUsers(ChangeEventArgs e)
+    {
+        try
+        {
+            string[] stringArray = (string[])e.Value;
+            string? emailUser = stringArray[0];
+            TeamLogic.AddMemberToTeam(_currentTeam.Id, emailUser);
+        }
+        catch (ArgumentException ex)
+        {
+            _message = ex.Message;
+        }
+    }
+}

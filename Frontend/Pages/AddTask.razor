@@ -1,0 +1,78 @@
+@page "/{id:int}/addTask/"
+
+@using BusinessLogic
+@using BusinessLogic.DTOs
+@inherits Auth
+@inject UserDto UserLog
+@inject TaskLogic TaskLogic
+@inject NavigationManager NavigationManager
+
+<PageTitle>Add Task</PageTitle>
+
+<h1>Add Task</h1>
+
+<h3>
+    User Logged: @UserLog.FirstNameAndLastName
+</h3>
+
+<form>
+    <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" class="form-control" id="title" @bind="_currentTask.Title" />
+    </div>
+    <div class="form-group">
+        <label for="description">Description</label>
+        <input type="text" class="form-control" id="description" @bind="_currentTask.Description" />
+    </div>
+    <div class="form-group">
+        <label for="priority">Priority</label>
+        <select class="form-control" id="priority" @bind="_currentTask.Priority">
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="deadline">Deadline</label>
+        <input type="datetime" class="form-control" id="deadline" @bind="_currentTask.Deadline" />
+    </div>
+
+    <br />
+
+    <div class="form-error">
+        @_message
+    </div>
+
+    <br />
+
+    <button type="button" class="btn btn-primary" @onclick="SaveChanges">Guardar cambios</button>
+    <a href="/panel/@Id/open/">Cancelar</a>
+</form>
+
+@code {
+    [Parameter]
+    public int Id { get; set; }
+    private string _message = "";
+    
+    private TaskDto? _currentTask;
+    
+    protected override void OnInitialized()
+    {
+        _currentTask = new TaskDto();
+        _currentTask.Deadline = DateTime.Now;
+    }
+    
+    private void SaveChanges()
+    {
+        try
+        {
+            TaskLogic.CreateTask(_currentTask,Id);
+            TaskLogic.UpdateTasks();
+            NavigationManager.NavigateTo($"/panel/{Id}/open/");
+        }
+        catch (Exception ex)
+        {
+            _message = ex.Message;
+        }
+    }
+}

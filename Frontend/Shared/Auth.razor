@@ -1,0 +1,18 @@
+@using BusinessLogic
+@using BusinessLogic.DTOs
+@inject NavigationManager NavigationManager
+@inject UserDto UserLog
+
+@code {
+    protected override void OnAfterRender(bool firstRender) => CheckUserAuthentication();
+
+
+    public void CheckUserAuthentication()
+    {
+        var uri = NavigationManager.ToBaseRelativePath(NavigationManager.Uri);
+        if ((UserLog.FirstNameAndLastName == null) && uri != "/SignIn")
+        {
+            NavigationManager.NavigateTo("/SignIn");
+        }
+    }
+}

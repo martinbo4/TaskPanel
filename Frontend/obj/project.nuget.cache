@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "4+tQEvJIg1S0F0IIsX6oKbSE3jRZSJqw2rUhl73HoikdsxYXz2Nib3mBCHsbmhvuUCv9AWm/08cqPNUe9vmFTg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\marti\\OneDrive\\Documentos\\ORT\\5to Semestre\\Diseño\\283558_289379_288255\\TaskPanel\\Frontend\\Frontend.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\marti\\.nuget\\packages\\csvhelper\\33.0.1\\csvhelper.33.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

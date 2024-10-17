@@ -1,0 +1,68 @@
+@page "/{id:int}/openOverdue/"
+
+@using BusinessLogic
+@using BusinessLogic.DTOs
+@inherits Auth
+@inject PanelLogic PanelLogic
+@inject UserDto UserLog
+@inject TaskLogic TaskLogic
+
+<PageTitle>OverdueTasks</PageTitle>
+
+<h1>
+    OverdueTasks User Logged: @UserLog.FirstNameAndLastName
+</h1>
+
+<h3>
+    User Logged: @UserLog.FirstNameAndLastName
+</h3>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>Title</th>
+        <th>Priority</th>
+        <th>Description</th>
+        <th>Deadline</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var task in _tasks)
+    {
+        <tr>
+            <td>@task.Title</td>
+            <td>@task.Priority</td>
+            <td>@task.Description</td>
+            <td>@task.Deadline</td>
+            <td>
+                @if (UserLog.IsAdmin || (_currentPanel.CreatorDto.Id == UserLog.Id))
+                {
+                <a class="btn btn-success btn-sm" href="/@task.Id/@Id/openOverdueReactivate/">Reactivate</a>
+                }
+                else
+                {
+                    <div class="alert alert-danger" role="alert">
+                        Access Denied: You do not have the necessary permissions.
+                    </div>
+                }
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+
+@code {
+    [Parameter]
+    public int Id { get; set; }
+    
+    private List<TaskDto>? _tasks;
+    private PanelDto? _currentPanel;
+    private bool _showConfirmDelete = false;
+    protected override void OnInitialized()
+    {
+        _currentPanel = PanelLogic.GetPanelById(Id);
+        _tasks = PanelLogic.GetPanelTasks(Id);
+        TaskLogic.UpdateTasks();
+    }
+}
