@@ -1,0 +1,95 @@
+@page "/AddUser"
+@inherits Auth
+@using BusinessLogic
+@using BusinessLogic.DTOs
+@inject UserLogic UserLogic
+@inject UserDto UserLog
+@inject NavigationManager NavigationManager
+
+<PageTitle>Add User</PageTitle>
+
+<h1>Add User</h1>
+
+<h3>
+    User Logged: @UserLog.FirstNameAndLastName
+</h3>
+
+<form>
+
+    <div class="form-group">
+        <label for="NameAndSurname">Name And Surname</label>
+        <input type="text" class="form-control" id="NameAndSurname" @bind="_currentUser.FirstNameAndLastName" />
+    </div>
+
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" class="form-control" id="email" @bind="_currentLogin.Email" />
+    </div>
+
+    <div class="form-group">
+        <label for="birthdate">Birthdate</label>
+        <input type="date" class="form-control" id="birthdate" @bind="_currentUser.Birthdate" />
+    </div>
+
+    <div class="form-group">
+        <label for="password">Password: If the password field is left empty, a random one will be generated.</label>
+        <input type="text" class="form-control" id="password" @bind="_currentLogin.Password" />
+    </div>
+
+    <div class="form-group">
+        <label for="isAdmin">Administrator permissions?</label>
+        <input type="checkbox" class="checkbox" id="isAdmin" @bind="_currentUser.IsAdmin" />
+    </div>
+    
+    <br />
+
+    <div class="form-error">
+        @_message
+    </div>
+
+    <br />
+
+    <button type="button" class="btn btn-primary" @onclick="SaveChanges">Guardar cambios</button>
+
+    <a href="/UserManagement">Cancelar</a>
+
+</form>
+
+<style>
+    .checkbox {
+        transform: scale(1.4);
+        margin: 5px;
+    }
+</style>
+@code {
+    
+    private LogInDto? _currentLogin;
+    private UserDto? _currentUser;
+    private string _message = "";
+    
+    protected override void OnInitialized()
+    {
+        _currentUser = new UserDto();
+        _currentLogin = new LogInDto();
+        _currentUser.Birthdate= DateTime.Today;
+        _currentLogin.Password = "";
+    }
+
+    private void SaveChanges()
+    {
+        try
+        {
+            if (_currentLogin.Password=="")
+            {
+                _currentLogin.Password = UserLogic.GenerateRandomPassword();
+            }
+            _currentUser.LogInDto = _currentLogin;
+            UserLogic.CreateUser(_currentUser);
+            NavigationManager.NavigateTo("/UserManagement");
+        }
+        catch (ArgumentException ex)
+        {
+            _message = ex.Message;
+        }
+    }
+}

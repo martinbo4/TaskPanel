@@ -1,0 +1,85 @@
+@page "/AddPanel"
+
+@using BusinessLogic
+@using BusinessLogic.DTOs
+@inherits Auth
+@inject TeamLogic TeamLogic
+@inject PanelLogic PanelLogic
+@inject UserDto UserLog
+@inject NavigationManager NavigationManager
+
+<PageTitle>Add Panel</PageTitle>
+
+<h1>Add Panel</h1>
+
+<h3>
+    User Logged: @UserLog.FirstNameAndLastName
+</h3>
+
+<form>
+
+    <div class="form-group">
+        <label for="Name">Name</label>
+        <input type="text" class="form-control" id="Name" @bind="_currentPanel.Name" />
+    </div>
+
+    <div class="form-group">
+        <label for="description">Description</label>
+        <input type="text" class="form-control" id="description" @bind="_currentPanel.Description" />
+    </div>
+
+    <div class="form-group">
+        <label for="team">Select Team</label>
+        <select class="form-control" id="team" @bind="_selectedTeamId">
+            @foreach (var team in _userTeams)
+            {
+            <option value="@team.Id">@team.Name</option>
+            }
+        </select>
+    </div>
+
+
+    <br />
+
+    <div class="form-error">
+        @_message
+    </div>
+
+    <br />
+
+    <button type="button" class="btn btn-primary" @onclick="SaveChanges">Guardar cambios</button>
+
+    <a href="/PanelVisualization">Cancelar</a>
+
+</form>
+@code {
+    private int _selectedTeamId;
+    private PanelDto? _currentPanel;
+    private List<TeamDto>? _userTeams;
+    private TeamDto? _currentTeam;
+    private UserDto? _currentUser;
+    private string _message = "";
+    
+    protected override void OnInitialized()
+    {
+        _currentUser = UserLog;
+        _currentPanel = new PanelDto();
+        _userTeams = TeamLogic.GetUserTeams(_currentUser);
+    }
+    
+    private void SaveChanges()
+    {
+        try
+        {
+            _currentTeam=TeamLogic.GetTeamById(_selectedTeamId);
+            _currentPanel!.CreatorDto=UserLog;
+            _currentPanel.TeamDto = _currentTeam;
+            PanelLogic.CreatePanel(_currentPanel);
+            NavigationManager.NavigateTo("/PanelVisualization");
+        }
+        catch (ArgumentException ex)
+        {
+            _message = ex.Message;
+        }
+    }
+}

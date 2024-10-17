@@ -1,0 +1,110 @@
+@page "/UserManagement"
+
+@inherits Auth
+@using BusinessLogic
+@using BusinessLogic.DTOs
+@inject UserLogic UserLogic
+@inject TeamLogic TeamLogic
+@inject UserDto UserLog
+
+<PageTitle>UserManagement</PageTitle>
+
+@if (_isPageVisible)
+{
+    <h1>
+        User Management
+        <a href="/AddUser" class="btn btn-success btn-sm" style="float: right;margin-right: 40px;">Add new user</a>
+    </h1>
+
+    <h3>
+        User Logged: @UserLog.FirstNameAndLastName
+    </h3>
+
+    <p>Here, administrators can add, remove, and modify users.</p>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Name and Surname</th>
+            <th>Email</th>
+            <th>Birthdate</th>
+            <th>Password</th>
+            <th>Is admin?</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var user in _userList)
+        {
+            <tr>
+                <td>@user.FirstNameAndLastName</td>
+                <td>@user.LogInDto.Email</td>
+                <td>@user.Birthdate</td>
+                <td>@user.LogInDto.Password</td>
+                <td>@user.IsAdmin</td>
+                <td>
+                    <a class="btn btn-success btn-sm" href="/@user.Id/edit/">Edit</a>
+                    @if (@user.Id != 1 && @user.Id != UserLog.Id)
+                    {
+                        <button class="btn btn-danger btn-sm" @onclick="(() => DeleteUser(user))">Delete</button>
+                    }
+                </td>
+            </tr>
+        }
+
+        <br />
+
+        <div class="form-error">
+            @_message
+        </div>
+
+        <br />
+        </tbody>
+    </table>
+}
+else
+{
+    <div class="alert alert-danger" role="alert">
+        Access Denied: You do not have the necessary permissions to view this page.
+    </div>
+}
+
+@code {
+    private List<UserDto>? _userList = new List<UserDto>();
+    private string _message = "";
+    private bool _isPageVisible = true;
+
+    protected override void OnInitialized()
+    {
+        _userList = UserLogic.GetAllUsers();
+        if (UserLog.IsAdmin)
+        {
+            _isPageVisible = true;
+        }
+        else
+        {
+            _isPageVisible = false;
+        }
+    }
+
+    private void DeleteUser(UserDto user)
+    {
+        try
+        {
+            List<TeamDto> teamDtos = TeamLogic.GetUserTeams(user);
+            foreach (TeamDto team in teamDtos)
+            {
+                if (team.MemberDtos.Any(u => u.Id == user.Id))
+                {
+                    TeamLogic.RemoveMemberFromTeam(team.Id, user.LogInDto.Email);
+                }
+            }
+            UserLogic.DeleteUserByEmail(user.LogInDto.Email);
+            _userList = UserLogic.GetAllUsers();
+        }
+        catch (ArgumentException ex)
+        {
+            _message = ex.Message;
+        }
+    }
+}

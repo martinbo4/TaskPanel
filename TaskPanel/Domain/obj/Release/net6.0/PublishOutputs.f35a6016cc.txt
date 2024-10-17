@@ -1,0 +1,4 @@
+C:\Users\marti\OneDrive\Documentos\ORT\5to Semestre\Diseño\283558_289379_288255\TaskPanel\release\Domain.dll
+C:\Users\marti\OneDrive\Documentos\ORT\5to Semestre\Diseño\283558_289379_288255\TaskPanel\release\Domain.deps.json
+C:\Users\marti\OneDrive\Documentos\ORT\5to Semestre\Diseño\283558_289379_288255\TaskPanel\release\Domain.pdb
+C:\Users\marti\OneDrive\Documentos\ORT\5to Semestre\Diseño\283558_289379_288255\TaskPanel\release\CsvHelper.dll

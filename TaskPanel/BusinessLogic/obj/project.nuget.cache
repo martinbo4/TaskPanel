@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "G50gLFy+V0pm2UdQk19VWEYrNfQyFV9M7Pwss6+7RKX7h3mShk1diH87BTp7Zh9V2JxXTFRuWeRLJ6pzZTBzvw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\marti\\OneDrive\\Documentos\\ORT\\5to Semestre\\Diseño\\283558_289379_288255\\TaskPanel\\BusinessLogic\\BusinessLogic.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\marti\\.nuget\\packages\\csvhelper\\33.0.1\\csvhelper.33.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,93 @@
+@page "/SignIn"
+
+@using BusinessLogic
+@using BusinessLogic.DTOs
+@inherits Auth
+@inject UserLogic UserLogic
+@inject UserDto UserLog
+@inject NavigationManager NavigationManager
+
+<PageTitle>Sign In</PageTitle>
+
+<h1>Sign In</h1>
+
+<form>
+
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" class="form-control" id="email" @bind="_email" />
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" @bind="_password" />
+    </div>
+
+    <br />
+
+    <div class="form-error">
+        @_message
+    </div>
+
+    <br />
+
+    <button type="button" class="btn btn-primary" @onclick="SignInBtn">Sign in</button>
+</form>
+
+@code {
+    private string? _email = "";
+    private string _password = "";
+    private string _message = "";
+
+    private LogInDto? _adminLogin;
+    private UserDto? _adminUser;
+    DateTime _birthdate = new DateTime(2004, 3, 5);
+    
+    private List<UserDto>? _userList = new List<UserDto>();
+    private UserDto? _currentUser;
+    
+    protected override void OnInitialized()
+    {
+        if (UserLogic.GetAllUsers()!.Count==0)
+        {
+            _adminLogin = new LogInDto
+            {
+                Email = "admin@gmail.com",
+                Password = "Admin123."
+            };
+            _adminUser = new UserDto
+            {
+                LogInDto = _adminLogin,
+                IsAdmin = true,
+                Birthdate = _birthdate,
+                FirstNameAndLastName = "admin"
+            };
+            UserLogic.CreateUser(_adminUser);
+        }
+        _userList = UserLogic.GetAllUsers();
+    }
+    
+    private void SignInBtn()
+    {
+        try
+        {
+            _currentUser = UserLogic.GetUserByEmail(_email);
+            if (_currentUser.LogInDto!.Password==_password)
+            {
+                UserLog.LogInDto=_currentUser.LogInDto;
+                UserLog.Birthdate = _currentUser.Birthdate;
+                UserLog.FirstNameAndLastName = _currentUser.FirstNameAndLastName;
+                UserLog.IsAdmin = _currentUser.IsAdmin;
+                UserLog.Id = _currentUser.Id;
+                NavigationManager.NavigateTo("/UserManagement");
+            }
+            else
+            {
+                _message = "Incorrect password.";
+            }
+        }
+        catch (ArgumentException ex)
+        {
+            _message = ex.Message;
+        }
+    }
+}

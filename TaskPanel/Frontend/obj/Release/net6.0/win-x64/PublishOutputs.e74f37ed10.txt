@@ -1,0 +1,14 @@
+C:\Users\marti\OneDrive\Escritorio\Publish\Frontend.exe
+C:\Users\marti\OneDrive\Escritorio\Publish\appsettings.Development.json
+C:\Users\marti\OneDrive\Escritorio\Publish\appsettings.json
+C:\Users\marti\OneDrive\Escritorio\Publish\Frontend.dll
+C:\Users\marti\OneDrive\Escritorio\Publish\Frontend.deps.json
+C:\Users\marti\OneDrive\Escritorio\Publish\Frontend.runtimeconfig.json
+C:\Users\marti\OneDrive\Escritorio\Publish\Frontend.pdb
+C:\Users\marti\OneDrive\Escritorio\Publish\CsvHelper.dll
+C:\Users\marti\OneDrive\Escritorio\Publish\BusinessLogic.dll
+C:\Users\marti\OneDrive\Escritorio\Publish\Domain.dll
+C:\Users\marti\OneDrive\Escritorio\Publish\Memory.dll
+C:\Users\marti\OneDrive\Escritorio\Publish\BusinessLogic.pdb
+C:\Users\marti\OneDrive\Escritorio\Publish\Domain.pdb
+C:\Users\marti\OneDrive\Escritorio\Publish\Memory.pdb
